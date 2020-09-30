@@ -1,4 +1,5 @@
-import Vue, { PluginObject } from 'vue'
+import { PluginObject } from 'vue'
+import { App } from '@vue/runtime-core'
 import { ElementUIComponent, ElementUIComponentSize, ElementUIHorizontalAlignment } from './component'
 
 import { ElAlert } from './alert'
@@ -95,7 +96,7 @@ export const version: string
  * Please do not invoke this method directly.
  * Call `Vue.use(ElementUI)` to install.
  */
-export function install (vue: typeof Vue, options: InstallationOptions): void
+export function install (app: App, options: InstallationOptions): void
 
 /** ElementUI component common definition */
 export type Component = ElementUIComponent
